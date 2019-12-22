@@ -139,4 +139,5 @@ While the list of valid choice exits:
 |5h - 21/12/2019  | Bug 1: Can not find all the valid choices | Check wrong conditions, omit the asterisk case |
 |2h - 21/12/2019  | Bug 2: The loop of the game is broken| Forget to check the boundary - Ver 1.0.0 |
 |2h - 22/12/2019  | Write README Ver 0.2.                | Solution + Coding Journey |
-|3h - 23/12/2019  | Add comment and re-design code       | Ver 1.1.0 |
+|3h - 23/12/2019  | Add comment and re-design code       | Ver 1.0.1 |
+|1h - 23/12/2019  | Bug 3: The loop of the game is overflow| Assign input of user - Ver 1.1.0 |

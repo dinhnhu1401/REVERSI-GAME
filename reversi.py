@@ -150,7 +150,7 @@ def get_enemies_line(board, x, y, player, direction):
     while board[x][y] == player and board[new_x][new_y] == enemy:
         enemy_line.append((new_x, new_y))
         new_x, new_y = move(new_x, new_y, direction)
-        if is_boundary(new_x, new_y) is True:
+        if is_boundary(new_x, new_y) is True: # bug 2
             return enemy_line
     return enemy_line
 
@@ -178,10 +178,11 @@ def get_valid_choices(board, x, y, player, directions):
             potential_position = move(enemy_line[-1][0],
                                       enemy_line[-1][1],
                                       directions[direction])
+            # bug 1
             if board[potential_position[0]][potential_position[1]] != player:
                 dict_eat[convert_to_string(potential_position[0],
                          potential_position[1])] = enemy_line
-    print(dict_eat)
+    # print(dict_eat)
     return dict_eat
 
 
@@ -210,7 +211,7 @@ def suggestion(board, player, directions):
 
 def eat(board, choices_enemies, user_choice, player):
     '''
-    @functional:
+    @functional: replace enemies 
     @input:
     @output:
     @description/logical:
@@ -244,25 +245,6 @@ def is_end_game(board):
     return True
 
 
-def calculateScores(board):
-    '''
-    @functional: calculate the Score of player
-    @input: board  matrix 2D
-    @output: (int, int) score of player ("B"; "W")
-    @description/logical:
-
-    '''
-    scoreW = 0
-    scoreB = 0
-    for x in range(len(rows)):
-        for y in range(len(cols)):
-            if board[x][y] == 'W':
-                scoreW += 1
-            if board[x][y] == 'B':
-                scoreB += 1
-    return (scoreB, scoreW)
-
-
 def show_suggestion(choices_enemies, board):
     '''
     @functional: Mark the suggestions by the asterisk *
@@ -287,15 +269,32 @@ def show_suggestion(choices_enemies, board):
 
 
 def end_game(board):
-    print("End game")
-    print('Score B - W: ', calculateScores(board))
+    '''
+    @functional: calculate the Score of player
+    @input: board  matrix 2D
+    @output: (int, int) score of player ("B"; "W")
+    @description/logical:
+
+    '''
+    print("End game!")
+    scoreW = 0
+    scoreB = 0
+    for x in range(len(rows)):
+        for y in range(len(cols)):
+            if board[x][y] == 'W':
+                scoreW += 1
+            if board[x][y] == 'B':
+                scoreB += 1
+    print('Score B : ', scoreB)
+    print('Score W : ', scoreW)
+    print("B wins") if scoreB > scoreW else print("W wins")
 
 
 if __name__ == "__main__":
     i = 0
-    choice = ''
+    
     while is_end_game(board) is False:
-
+        choice = '' # bug 3
         current = i % 2
         choices_enemies = suggestion(board, players[current], directions)
         board = show_suggestion(choices_enemies, board)
@@ -306,6 +305,7 @@ if __name__ == "__main__":
         print(' '.join(choices_enemies.keys()))
 
         valid_choices = list(choices_enemies.keys())
+
         while choice not in valid_choices:
             choice = input('Player ' + players[current] + ': ')
 

@@ -141,3 +141,4 @@ While the list of valid choice exits:
 |2h - 22/12/2019  | Write README Ver 0.2.                | Solution + Coding Journey |
 |3h - 23/12/2019  | Add comment and re-design code       | Ver 1.0.1 |
 |1h - 23/12/2019  | Bug 3: The loop of the game is overflow| Assign input of user - Ver 1.1.0 |
+|1h - 23/12/2019  | Edit pycodestyle + rename vars + Line alignment + re-structure init game| Light version 1.2.0

@@ -149,10 +149,12 @@ def get_valid_choices(board, x, y, player, directions):
 
 def suggestion(board, player, directions):
     """
-    @functional:
-    @input:
-    @output:
+    @functional: collect all valid choice into a list
+    @input: as usual
+    @output: return a dictionary key=central cell, value=enemies
     @description/logical:
+        go through the board and then identify all the enemies
+        group them by the those valid choices
     """
     enemies = []
     for x in range(len(rows)):
@@ -163,8 +165,8 @@ def suggestion(board, player, directions):
 
     from collections import defaultdict
     merge_all = defaultdict(list)
-    for d in enemies:
-        for key, value in d.items():
+    for e in enemies:
+        for key, value in e.items():
             merge_all[key].append(value)
     # print(merge_all)
     return merge_all
@@ -173,9 +175,12 @@ def suggestion(board, player, directions):
 def eat(board, enemies, user_choice, player):
     """
     @functional: replace enemies
-    @input:
-    @output:
+    @input: as usual
+    @output: the new board after replace enemies
     @description/logical:
+        use itertools to group all enemies depend on a player's choice
+        then replace all enemies between by wildcard character for the current player.
+        finally replace the position had been chosen.
     """
     import itertools
     index_enemies = enemies[user_choice]

@@ -1,5 +1,5 @@
-﻿﻿
-# GAME REVERSI - python3
+﻿# GAME REVERSI - python3
+
 Reversi is a strategy board game for two players, played on an 8×8 uncheckered board.
 
 You can search more about the rules on the internet, even you can try a little at game online website.
@@ -16,9 +16,7 @@ python3 reversi.py
 ```
 
 #### Run the game on the Online Python Compiler
-
-Visit [my repl](https://repl.it/@dinhnhu1401/GAME-REVERSI) and enjoy!
-
+Visit [my repl](https://repl.it/@dinhnhu1401/GAME-REVERSI) and enjoy
 
 # Mission
 Write a **light** version game of Reversi.
@@ -44,8 +42,10 @@ The game ends when both players cannot play anymore.
 
 ### Error handling
 If the player plays something invalid, here is how you will handle it.
-Putting it together
+Putting it together.
+
 Now, you also need to handle the case when a player doesn't have any valid move, as well as when both players don't have any move available.
+
 Finally, when the game ends, you need to count the points.
 
 # Analysis: Data structures and Functions

@@ -9,10 +9,18 @@ You can search more about the rules on the internet, even you can try a little a
 ### Enjoy the game
 
 #### Clone my repository
-```python3
+```bash
 git clone https://github.com/dinhnhu1401/REVERSI-GAME.git
 cd REVERSI-GAME
 python3 reversi.py
+
+WELLCOME TO REVERSI GAME - BY MANDY DINH
+Press 1: Play with machine (You are player B, machine is player W)
+press 2: Two players
+Press: _ 
+
+(start game)
+
 ```
 
 #### Run the game on the Online Python Compiler
@@ -142,5 +150,6 @@ While the list of valid choice exits:
 |3h - 23/12/2019  | Add comment and re-design code       | Ver 1.0.1 |
 |1h - 23/12/2019  | Bug 3: The loop of the game is overflow| Assign input of user - Ver 1.1.0 |
 |1h - 23/12/2019  | Edit pycodestyle + rename vars + Line alignment + re-structure init game| Light version 1.2.0
+|2h - 31/12/2019  | Add option 2 players or play with machine! | 1.3.0
 
 @INTEKPROJECT

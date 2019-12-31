@@ -206,7 +206,7 @@ def is_end_game(board):
         else stop game (True)
     """
     for sub_line in board:
-        if '.' in sub_line:
+        if '.' or '*' in sub_line:
             return False
     return True
 
@@ -297,7 +297,11 @@ if __name__ == "__main__":
     }
     i = 0
     current = 0
-    choice = ''
+
+    print("WELLCOME TO REVERSI GAME - BY MANDY DINH")
+    print("Press 1: Play with machine")
+    print("press 2: Two players")
+    user = input('Press: ')
 
     # looping
     while is_end_game(main_board) is False:
@@ -313,8 +317,16 @@ if __name__ == "__main__":
 
         valid_choices = list(choices_enemies.keys())
 
-        while choice not in valid_choices:
-            choice = input('Player ' + players[current] + ': ')
+        if players[current] == W and user == "1":
+            if not valid_choices:
+                print("Can not move!")
+                break
+            import random
+            choice = random.choice(valid_choices)
+            print("W (machine): ", choice)
+        else:
+            while choice not in valid_choices:
+                choice = input('Player ' + players[current] + ': ')
 
         if len(valid_choices) == 0:
             break

@@ -23,9 +23,6 @@ Press: _
 
 ```
 
-#### Run the game on the Online Python Compiler
-Visit [my repl](https://repl.it/@dinhnhu1401/GAME-REVERSI) and enjoy
-
 # Mission
 Write a **light** version game of Reversi.
 
@@ -118,7 +115,7 @@ Valid choices: e6 c4 d3 f5
 Player W:
 ```
  
-# Solution and related skills:
+# Solution and related modules:
 
 ## Solution:
 
@@ -132,24 +129,24 @@ While the list of valid choice exits:
 - Optimize player's choice by maximizing the number of enemies captured and display the list of valid choices by this order.
 - When the current player **chooses** the next step, retrieve all enemies depends on the player's choice.
 
-## Ralated skills:
+## Ralated mdules:
 
 - Use **collections** import *defaultdict*
 - Use **itertools**
   
 # Coding Journey
 
-|Period time      |Describe Stuck or A done feature      |Cause or Result       |
+|No               |Describe                              |Cause or Result       |
 |-----------------|--------------------------------------|----------------------|
-|24h of Hyperspace| A stupid mess!                       | Distracted, not calm |
-|10h - .......    | Omit the old and rebuild the new one | Ver 0.1 - 2 bugs     |
-|...........      | Write README Ver 0.1                 | The skeleton structure |
-|5h - 21/12/2019  | Bug 1: Can not find all the valid choices | Check wrong conditions, omit the asterisk case |
-|2h - 21/12/2019  | Bug 2: The loop of the game is broken| Forget to check the boundary - Ver 1.0.0 |
-|2h - 22/12/2019  | Write README Ver 0.2.                | Solution + Coding Journey |
-|3h - 23/12/2019  | Add comment and re-design code       | Ver 1.0.1 |
-|1h - 23/12/2019  | Bug 3: The loop of the game is overflow| Assign input of user - Ver 1.1.0 |
-|1h - 23/12/2019  | Edit pycodestyle + rename vars + Line alignment + re-structure init game| Light version 1.2.0
-|2h - 31/12/2019  | Add option 2 players or play with machine! | 1.3.0
+|1                | A stupid mess!                       | Distracted, not calm |
+|2                | Omit the old and rebuild the new one | Ver 0.1 - 2 bugs     |
+|3                | Write README Ver 0.1                 | The skeleton structure |
+|4                | Bug 1: Can not find all the valid choices | Check wrong conditions, omit the asterisk case |
+|5                | Bug 2: The loop of the game is broken| Forget to check the boundary - Ver 1.0.0 |
+|6                | Write README Ver 0.2.                | Solution + Coding Journey |
+|7                | Add comment and re-design code       | Ver 1.0.1 |
+|8                | Bug 3: The loop of the game is overflow| Assign input of user - Ver 1.1.0 |
+|9                |Edit pycodestyle + rename vars + Line alignment + re-structure init game| Light version 1.2.0
+|10               | Add option 2 players or play with machine! | 1.3.0
 
 @INTEKPROJECT

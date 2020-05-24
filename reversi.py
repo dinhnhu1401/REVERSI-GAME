@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def show_board(board):
     """
     @functional: Print the board into the screen
@@ -298,9 +299,10 @@ if __name__ == "__main__":
     i = 0
     current = 0
 
-    print("WELLCOME TO REVERSI GAME - BY MANDY DINH")
+    print("WELLCOME TO REVERSI GAME - BY MANDY")
     print("Press 1: Play with machine")
     print("press 2: Two players")
+    print("Press q: Quit game")
     user = input('Press: ')
 
     # looping
@@ -327,6 +329,9 @@ if __name__ == "__main__":
         else:
             while choice not in valid_choices:
                 choice = input('Player ' + players[current] + ': ')
+                if choice == 'q':
+                    end_game(main_board)
+                    exit()
 
         if len(valid_choices) == 0:
             break
